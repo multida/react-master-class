@@ -19,16 +19,31 @@ const rotateAnimation = keyframes`
 `;
 
 const Box = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 200px;
   height: 200px;
   background-color: paleturquoise;
   animation: ${rotateAnimation} 1s linear infinite;
+
+  span {
+    font-size: 36px;
+    &:hover {
+      font-size: 60px;
+    }
+    &:active {
+      opacity: 0;
+    }
+  }
 `;
 
 function App() {
   return (
     <Wrapper>
-      <Box />
+      <Box>
+        <span>😎</span>
+      </Box>
     </Wrapper>
   );
 }
