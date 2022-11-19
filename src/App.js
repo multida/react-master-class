@@ -4,14 +4,8 @@ const Father = styled.div`
   display: flex;
 `;
 
-const BoxOne = styled.div`
-  background-color: teal;
-  width: 100px;
-  height: 100px;
-`;
-
-const BoxTwo = styled.div`
-  background-color: tomato;
+const Box = styled.div`
+  background-color: ${(props) => props.bgColor};
   width: 100px;
   height: 100px;
 `;
@@ -23,10 +17,10 @@ const Text = styled.span`
 function App() {
   return (
     <Father>
-      <BoxOne>
+      <Box bgColor="teal">
         <Text>Hi</Text>
-      </BoxOne>
-      <BoxTwo />
+      </Box>
+      <Box bgColor="tomato" />
     </Father>
   );
 }
